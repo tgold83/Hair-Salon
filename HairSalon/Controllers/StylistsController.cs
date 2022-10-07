@@ -36,8 +36,10 @@ namespace HairSalonControllers
 
     public ActionResult Details(int id)
     {
-      Stylist thisClient = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      return View(thisClient);
+      ViewBag.thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      ViewBag.thisClient = _db.Clients.FirstOrDefault(stylist => stylist.StylistId == id);
+      //ViewBag.ClientName = _db.Clients;
+      return View();
     }
 
     public ActionResult Edit(int id)
