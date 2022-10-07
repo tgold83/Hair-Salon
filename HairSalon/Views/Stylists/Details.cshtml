@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<h2>Stylist's Details</h2>
+<hr />
+<h3>@ViewBag.thisStylist.Name</h3>
+<h3>Services: @ViewBag.thisStylist.Services</h3><br>
+
+<h2>This Stylist's Client List:</h2>
+  
+@if (ViewBag.thisClient != null)
+  {
+    <h3>@ViewBag.thisClient.Name</h3><br>
+  }
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Stylist", "Edit", new { ViewBag.thisStylist.StylistId })</p>
+<p>@Html.ActionLink("Delete Stylist", "Delete", new { ViewBag.thisStylist.StylistId })</p>
