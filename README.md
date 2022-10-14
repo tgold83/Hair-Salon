@@ -28,6 +28,8 @@ _A simple MVC application where the user can input as many different Stylists as
     }
   }
 * _Put your password for My SQL Workbench in the section that reads [YOUR-PASWORD-HERE]_
+* _To setup the database you open up MySQL and under 'Administration' select 'Data Import'_
+* _Check the 'Import from self contained file' option and enter the file path of the Database within HairSalon, then start Import_
 * _Run the program with $dotnet run._
 
 ## Known Bugs
